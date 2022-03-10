@@ -28,10 +28,11 @@ main {
 }
 
 .character-card {
-    height: 14rem;
+    height: 38vh;
     margin-top: .5rem;
     width: 94vw;
-    max-width: 230px;
+    max-width: 260px;
+    min-height: 360px;
     padding: 1vh 1vw;
     font-size: 1.6rem;
     color: white;
@@ -47,9 +48,8 @@ main {
 
 @media(min-width: 550px) {
     .character-card {
-        border: .2rem solid #000721;
-        height: 26rem;
-        width: 37vw;
+        height: 50vh;
+        width: 40vw;
     }
 }
 
@@ -68,7 +68,7 @@ main {
 }
 
 .avatar {
-    width: 15vh;
+    width: 80%;
     border: 2px solid #000721;
     max-width: 100%;
     opacity: .8;
@@ -78,7 +78,7 @@ main {
 
 @media(min-width: 550px) {
     .avatar {
-        width: 25vh;
+        width: 95%;
     }
 }
 
@@ -138,7 +138,7 @@ main {
 
 @media(min-width: 550px) {
     .dice-container {
-        height: 30%;
+        height: 20%;
         border-bottom-left-radius: 3px;
         border-bottom-right-radius: 3px;
     }
@@ -146,7 +146,7 @@ main {
 
 .dice, .placeholder-dice {
     height: 5.5vh;
-    width: 5.5vw;
+    width: 9.5vw;
     background: #fff;
     border-radius: 5px;
     border: 1px solid #666;
@@ -156,9 +156,9 @@ main {
 
 @media(min-width: 550px) {
     .dice-container .dice, .dice-container .placeholder-dice {
-        height: 10vh;
-        width: 10vh;
-        line-height: 10.5vh;
+        height: 5.5vh;
+        width: 5.5vh;
+        line-height: 5.75vh;
     }
 }
 
@@ -187,7 +187,7 @@ button {
 
 @media(min-width: 550px) {
     button {
-        margin-top: 0;
+        margin-top: 0,5rem;
     }
 }
 
