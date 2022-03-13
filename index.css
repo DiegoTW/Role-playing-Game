@@ -32,7 +32,7 @@ main {
     margin-top: .5rem;
     width: 94vw;
     max-width: 260px;
-    min-height: 360px;
+    min-height: 290px;
     padding: 1vh 1vw;
     font-size: 1.6rem;
     color: white;
@@ -68,7 +68,7 @@ main {
 }
 
 .avatar {
-    width: 80%;
+    width: 52%;
     border: 2px solid #000721;
     max-width: 100%;
     opacity: .8;
