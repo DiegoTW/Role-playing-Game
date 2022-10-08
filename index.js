@@ -29,7 +29,7 @@ function attack() {
                     monster.setDiceHtml()  
                     render()
                     isWaiting = false
-                }, 1500)
+                }, 1000)
 
             } else {
                 endGame()
@@ -53,15 +53,39 @@ function endGame() {
                 <h2>Game Over</h2>
                 <h3>${endMessage}</h3>
                 <p class="end-emoji">${endEmoji}</p>
+                <section id="actions">
+                    <button id="restart-button" class="restart-btn">Restart</button>
+                </section>
             </div>`
-    }, 1510)
+    }, 1000)
 }
 
-document.getElementById('attack-button').addEventListener('click', attack)
+function restart() {
+    console.log('click');
+
+    document.querySelector('main').innerHTML = '';
+
+    const divHero = document.createElement('div');
+    const divMonster = document.createElement('div');
+    
+    divHero.setAttribute('id', 'hero');
+    divHero.setAttribute('class', 'card-container');
+    divMonster.setAttribute('id', 'monster');
+    divMonster.setAttribute('class', 'card-container');
+
+    console.log(divHero);
+
+    document.querySelector('main').appendChild(divHero);
+    document.querySelector('main').appendChild(divMonster);
+
+}
+
+document.getElementById('attack-button').addEventListener('click', attack);
+document.getElementById('restart-button').addEventListener('click', restart);
 
 function render() {
-    document.getElementById('hero').innerHTML = wizard.getCharacterHtml()
-    document.getElementById('monster').innerHTML = monster.getCharacterHtml()
+    document.getElementById('hero').innerHTML = wizard.getCharacterHtml();
+    document.getElementById('monster').innerHTML = monster.getCharacterHtml();
 }
 
 let monster = getNewMonster()

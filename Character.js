@@ -36,9 +36,11 @@ class Character {
         const healthBar = this.getHealthBarHtml()
         return `
             <div class="character-card">
-                <h4 class="name"> ${name}</h4> </h4>
-                <img class="avatar" src="${avatar}"/>
-                <p class="health">health: <b> ${health}</b> </b></p>
+                <h4 class="name"> ${name} </h4>
+                <div class="img-container">
+                    <img class="avatar" src="${avatar}"/>
+                </div>
+                <p class="health"><span>health:</span> <b> ${health} </b></p>
                     ${healthBar}
                 <div class="dice-container">
                     ${diceHtml}
@@ -46,6 +48,25 @@ class Character {
             </div>
         `
     }
+
+    getCharacterHtmlRestart() {
+        const { name, avatar, health, diceHtml } = this
+        const healthBar = this.getHealthBarHtml()
+        return `
+            <div class="character-card">
+                <h4 class="name"> ${name}</h4> </h4>
+                <div class="img-container">
+                    <img class="avatar" src="${avatar}"/>
+                </div>
+                <p class="health"><span>health:</span> <b> ${health} </b></p>
+                    ${healthBar}
+                <div class="dice-container">
+                    ${diceHtml}
+                </div>
+            </div>
+        `
+    }
+    
 }
 
 export default Character

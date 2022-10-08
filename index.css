@@ -1,85 +1,73 @@
-html, body {
-    padding: 0;
+*, ::before, ::after {
+    box-sizing: border-box;    
     margin: 0;
-    background: rgba(51, 43, 55, 1);
-    background: radial-gradient(circle, rgba(51, 43, 55, 1) 0%, rgba(51, 43, 55, 1) 100%);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: #fff;
+}
+
+body {
+    background: #1d0238;
+    color: #b981ed;
     font-family: 'MedievalSharp', cursive;
+    text-align: center;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    align-items: center;
+    justify-content: center;
 }
 
 main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: top 0.5rem;
+    justify-content: center;
 }
 
-@media(min-width: 500px) {
-    main {
-        flex-direction: row;
-        margin: 6vh 5 vw;
-        justify-content: center;
-        width: 86vw;
-        gap: 2rem;
-    }
+span {
+    color: #b981ed;
+}
+
+.card-container {
+    width: 100%;
+}
+
+section {
+    display: flex;
+    justify-content: space-around;
 }
 
 .character-card {
-    height: 34vh;
-    margin-top: .5rem;
-    width: 94vw;
-    max-width: 250px;
-    min-height: 270px;
-    padding: 1vh 1vw;
-    font-size: 1.6rem;
+    margin: 0 auto 1rem;
+    max-width: 300px;
+    padding: .5rem 0;
     color: white;
-    border-radius: 24px;
-    position: relative;
-    background: #231d24;
-    text-align: center;
-    overflow: hidden;
-    border: .2rem solid #000721;
-    box-shadow: inset 0px 0px 6px 3px rgba(100, 100, 100, 0.3),
-                2px 2px 20px 1px rgba(217, 239, 250, 0.4);
-}
-
-@media(min-width: 500px) {
-    .character-card {
-        height: 50vh;
-        width: 40vw;
-    }
+    border-radius: 1.5rem;
+    background: #48320a54;
+    border: 1px solid #b981ed;
 }
 
 .name {
-    margin: 1vh 0px;
-    width: 100%;
     letter-spacing: .08em;
-    font-size: 90%;
+    font-size: 1.4rem;
+    padding: .2rem;
+    margin: 0;
 }
 
-@media(min-width: 500px) {
-    .name {
-        margin: 2vh 0;
-        font-size: 100%;
-    }
+.img-container {
+    width: 9rem;
+    height: 7rem;
+    border-radius: 1rem;
+    overflow: hidden;
+    margin: 0 auto;
 }
 
 .avatar {
-    width: 50%;
+    width: 100%;
     border: 2px solid #000721;
-    max-width: 100%;
-    opacity: .8;
-    border-radius: 10px;
+    object-fit: cover;
     background-color: rgba(0, 7, 33, 0.8);
-}
-
-@media(min-width:  500px) {
-    .avatar {
-        width: 55%;
-    }
 }
 
 .health {
@@ -92,12 +80,6 @@ main {
     letter-spacing: .03em;
 }
 
-@media(min-width: 500px) {
-    .health {
-        margin: 2vh 5%;
-    }
-}
-
 .health b {
     font-weight: bold;
     color: #fff;
@@ -105,9 +87,9 @@ main {
 
 .health-bar-outer {
     background: #171217;
-    height: 1vh;
+    height: 0.5rem;
     width: 90%;
-    margin: 0 5%;
+    margin: 0 auto .5rem;
     border-radius: 2px;
 }
 
@@ -122,13 +104,7 @@ main {
 }
 
 .dice-container {
-    width: 100%;
-    height: 20%;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background:#000721;
+    padding: 0 0 .4rem;
     color:#171217;
     display: flex;
     justify-content: center;
@@ -136,58 +112,33 @@ main {
     gap: .5rem;
 }
 
-@media(min-width: 500px) {
-    .dice-container {
-        height: 20%;
-        border-bottom-left-radius: 3px;
-        border-bottom-right-radius: 3px;
-    }
-}
-
 .dice, .placeholder-dice {
-    height: 5.5vh;
-    width: 9.5vw;
-    background: #fff;
+    height: 2rem;
+    width: 2rem;
+    font-size: 1.8rem;
+    background: #fdf3df;
     border-radius: 5px;
     border: 1px solid #666;
-    text-align: center;
-    line-height: 6vh;
-}
-
-@media(min-width: 500px) {
-    .dice-container .dice, .dice-container .placeholder-dice {
-        height: 8.5vh;
-        width: 8.5vh;
-        line-height: 8.75vh;
-    }
 }
 
 .dice-container .placeholder-dice {
-    background-color: transparent;
+    background-color: #48320a54;
 }
 
 button {
-    margin-top: .5rem;
     font-family: 'MedievalSharp', cursive;
     background-color: #cc9713;
     outline: none;
-    padding-left: 5vw;
-    padding-right: 5vw;
-    text-align: center;
     text-decoration: none;
     display: inline-block;
+    padding: 0.3rem;
     font-size: 1.5rem;
-    border-radius: 6px;
+    border: none;
+    padding: .2rem;
+    border-radius: .5rem;
     cursor: pointer;
     color: #662402;
-    height: 9vh;
     box-shadow: 0px 6px 10px -4px rgba(0, 0, 0, 0.4);
-}
-
-@media(min-width: 500px) {
-    button {
-        margin-top: 0,5rem;
-    }
 }
 
 button:focus { 
@@ -195,10 +146,42 @@ button:focus {
 }
 
 .end-game {
-    margin-top: 25%;
-    text-align: center;
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    place-content: center;
+    place-items: center;
 }
 
 .end-emoji {
     font-size: 80px;
+}
+
+@media screen and (orientation: landscape) {
+    main {
+        width: 80vw;
+        flex-direction: row;
+        gap: 1rem;
+    }
+
+    .title {
+        font-size: 1.8rem;
+        margin: 0;
+    }
+
+    .name {
+        font-size: 1rem;
+    }
+
+    .container {
+        height: 100vh;
+    }
+    
+    .character-card {
+        margin: 0 auto;
+    }
+
+    button {
+        font-size: 1rem;
+    }
 }

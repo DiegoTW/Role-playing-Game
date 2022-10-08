@@ -11,13 +11,17 @@
         <link rel="stylesheet" href="index.css">
     </head>
     <body>
-        <main>
-            <div id="hero"></div>
-            <div id="monster"></div>
-        </main>
-        <section id="actions">
-            <button id="attack-button">Attack</button>
-        </section>
+        <div class="container">
+            <h1 class="title">Medieval Fantasy</h1>
+            <main>
+                <div id="hero" class="card-container"></div>
+                <div id="monster" class="card-container"></div>
+            </main>
+            <section id="actions">
+                <button id="restart-button" class="restart-btn">Restart</button>
+                <button id="attack-button" class="attack-btn">Attack</button>
+            </section>
+        </div>
         <script src="./index.js" type="module"></script>
     </body>
 </html>
